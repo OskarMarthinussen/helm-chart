@@ -1,0 +1,17 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: exampleapp
+  namespace: openshift-operators
+spec:
+  destination:
+    namespace: eiriktenant-test
+    server: 'https://kubernetes.default.svc'
+  source:
+    repoURL: 'https://github.com/OskarMarthinussen/helm-chart.git'
+  syncPolicy:
+    automated:
+      selfHeal: true
+      prune: true
+      allowEmpty: true
+  project: eiriktenant
