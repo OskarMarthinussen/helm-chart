@@ -2,17 +2,17 @@ apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
   name: app1-preprod
-  namespace: oskartenant-preprod
+  namespace: demo-preprod
 spec:
   destination:
-    namespace: oskartenant-preprod
+    namespace: demo-preprod
     server: 'https://kubernetes.default.svc'
   source:
     repoURL: 'https://github.com/OskarMarthinussen/helm-chart.git'
-    path: dev/app1
+    path: preprod/app1
   syncPolicy:
     automated:
       selfHeal: true
       prune: true
       allowEmpty: true
-  project: oskartenant
+  project: demo

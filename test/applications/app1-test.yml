@@ -1,18 +1,18 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: app1-dev
-  namespace: eiriktenant-dev
+  name: app1-test
+  namespace: demo-test
 spec:
   destination:
-    namespace: eiriktenant-dev
+    namespace: demo-test
     server: 'https://kubernetes.default.svc'
   source:
     repoURL: 'https://github.com/OskarMarthinussen/helm-chart.git'
-    path: dev/app1
+    path: test/app1
   syncPolicy:
     automated:
       selfHeal: true
       prune: true
       allowEmpty: true
-  project: eiriktenant
+  project: demo
