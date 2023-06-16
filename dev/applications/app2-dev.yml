@@ -5,7 +5,7 @@ metadata:
   namespace: developers-gitops
 spec:
   destination:
-    namespace: openshift-gitops
+    namespace: demo-dev
     server: 'https://kubernetes.default.svc'
   source:
     repoURL: 'https://github.com/OskarMarthinussen/helm-chart.git'
