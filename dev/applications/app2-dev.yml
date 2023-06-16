@@ -1,0 +1,19 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: app2-dev
+  namespace: developers-gitops
+spec:
+  destination:
+    namespace: demo-dev
+    server: 'https://kubernetes.default.svc'
+  source:
+    repoURL: 'https://github.com/OskarMarthinussen/helm-chart.git'
+    path: dev/app2
+    targetRevision: HEAD
+  syncPolicy:
+    automated:
+      selfHeal: true
+      prune: true
+      allowEmpty: true
+  project: demo
