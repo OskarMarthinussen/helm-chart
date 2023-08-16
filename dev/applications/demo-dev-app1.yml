@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: demo-app1-dev
+  name: demo-dev-app1
   namespace: gitops-developers
 spec:
   destination:
@@ -9,7 +9,7 @@ spec:
     server: 'https://kubernetes.default.svc'
   source:
     repoURL: 'https://github.com/OskarMarthinussen/testing-ok.git'
-    path: dev/app1
+    path: dev/demo-dev-app1
     targetRevision: HEAD
   syncPolicy:
     automated:
