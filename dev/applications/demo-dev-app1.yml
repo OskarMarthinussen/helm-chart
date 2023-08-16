@@ -9,7 +9,7 @@ spec:
     server: 'https://kubernetes.default.svc'
   source:
     repoURL: 'https://github.com/OskarMarthinussen/testing-ok.git'
-    path: dev/demo-dev-app1
+    path: applications
     targetRevision: HEAD
   syncPolicy:
     automated:

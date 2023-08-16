@@ -1,16 +1,15 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: demo-dev-app2
-  namespace: gitops-developers
+  name: demo-test-app1
+  namespace: demo-test
 spec:
   destination:
-    namespace: demo-dev
+    namespace: demo-test
     server: 'https://kubernetes.default.svc'
   source:
     repoURL: 'https://github.com/OskarMarthinussen/helm-chart.git'
-    path: dev/demo-dev-app1
-    targetRevision: HEAD
+    path: test/demo-test-app1
   syncPolicy:
     automated:
       selfHeal: true

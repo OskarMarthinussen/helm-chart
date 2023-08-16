@@ -1,15 +1,16 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: app1-test
-  namespace: demo-test
+  name: demo-preprod-app1
+  namespace: demo-preprod
 spec:
   destination:
-    namespace: demo-test
+    namespace: demo-preprod
     server: 'https://kubernetes.default.svc'
   source:
     repoURL: 'https://github.com/OskarMarthinussen/helm-chart.git'
-    path: test/app1
+    path: preprod/demo-preprod-app1
+    targetRevision: HEAD
   syncPolicy:
     automated:
       selfHeal: true
