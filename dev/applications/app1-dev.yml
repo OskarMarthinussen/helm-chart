@@ -8,7 +8,7 @@ spec:
     namespace: demo-dev
     server: 'https://kubernetes.default.svc'
   source:
-    repoURL: 'https://github.com/OskarMarthinussen/helm-chart.git'
+    repoURL: 'https://github.com/OskarMarthinussen/testing-ok.git'
     path: dev/app1
     targetRevision: HEAD
   syncPolicy:
