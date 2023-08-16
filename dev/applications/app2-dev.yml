@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: app2-dev
+  name: demo-app2-dev
   namespace: gitops-developers
 spec:
   destination:
