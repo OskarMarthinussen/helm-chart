@@ -3,4 +3,5 @@ kind: Kustomization
 
 resources:
   - demo-dev-app1.yml
+  - demo-dev-app2.yml
   - additional-repo-credentials.yml
