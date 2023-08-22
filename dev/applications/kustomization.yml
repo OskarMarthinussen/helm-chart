@@ -5,3 +5,4 @@ resources:
   - demo-dev-app1.yml
   - demo-dev-app2.yml
   - additional-repo-credentials.yml
+  - oskar-dev-private-repo-app1.yml
